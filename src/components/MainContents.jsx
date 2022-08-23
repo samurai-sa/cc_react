@@ -1,3 +1,8 @@
+import { PropsSample } from './PropsSample.jsx';
+import { StateSample } from './StateSample.jsx';
+import { Counter } from './Counter.jsx';
+import { EffectSample } from './EffectSample.jsx';
+
 export const MainContents = () => {
   const alertMessage = () => {
     alert('ボタンが押されました。');
@@ -5,8 +10,12 @@ export const MainContents = () => {
   return (
     <main>
       <h2>本格的な構造</h2>
-      <p>複数の要素です</p>
+      <p>複数の要素です。</p>
       <button onClick={alertMessage}>アラートが出ます。</button>
-    </main>
-  )
-}
+      <PropsSample />
+      <StateSample />
+      <Counter />
+      <EffectSample />
+  </main>
+  );
+};
